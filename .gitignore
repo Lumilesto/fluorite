@@ -1,0 +1,5 @@
+__pycache__
+*-backups
+fp-info-cache
+*.bak
+PCB/Design/R2C2/**
