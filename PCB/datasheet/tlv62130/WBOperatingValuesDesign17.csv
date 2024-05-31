@@ -1,0 +1,31 @@
+﻿Name,Value,Category,Description
+Vout,3.3 V,System Information,Operational Output Voltage
+Cin IRMS,955.34 mA,Capacitor,Input capacitor RMS ripple current
+Cin Pd,2.74 mW,Capacitor,Input capacitor power dissipation
+Cout IRMS,135.76 mA,Capacitor,Output capacitor RMS ripple current
+Cout Pd,18.43 µW,Capacitor,Output capacitor power dissipation
+Duty Cycle,64.78%,System Information,Duty cycle
+Efficiency,91.4%,System Information,Steady state efficiency
+Frequency,1.38 MHz,System Information,Switching frequency
+IC Tj,42.95 °C,IC,IC junction temperature
+ICThetaJA,29.1 °C/W,IC,IC junction-to-ambient thermal resistance
+L Ipp,470.28 mA,Inductor,Peak-to-peak inductor ripple current
+L Pd,176 mW,Inductor,Inductor power dissipation
+IC Pd,445.02 mW,IC,IC power dissipation
+Pout,6.6 W,System Information,Total output power
+Iin Avg,1.31 A,IC,Average input current
+IC Ipk,2.24 A,IC,Peak switch current in IC
+Mode,CCM,System Information,Conduction Mode
+Vout p-p,5.43 mV,System Information,Peak-to-peak output ripple voltage
+FootPrint,72 mm²,System Information,Total Foot Print Area of BOM components
+Vout Actual,3.3 V,System Information,Vout Actual calculated based on selected voltage divider resistors
+Vout Tolerance,4.70%,System Information,Vout Tolerance based on IC Tolerance (full load) and voltage divider resistors if applicable
+Vin,5.5 V,System Information,Vin operating point
+Iout,2 A,System Information,Iout operating point
+Cin Pd,2.74 mW,Power,Input capacitor power dissipation
+Cout Pd,18.43 µW,Power,Output capacitor power dissipation
+L Pd,176 mW,Power,Inductor power dissipation
+IC Pd,445.02 mW,Power,IC power dissipation
+Total BOM,$1.28,System Information,Total BOM Cost
+Total Pd,623.77 mW,Power,Total Power Dissipation
+BOM Count,9 ,System Information,Total Design BOM count

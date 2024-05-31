@@ -1,0 +1,42 @@
+import schemdraw
+import schemdraw.elements as elm
+with schemdraw.Drawing(file='V-I-transactor.svg') as d:
+	d += elm.Vdd().up().label('Vvar')
+	d += elm.ResistorIEC().right().label('33.2K$\Omega$ 1%')
+	d += elm.Dot()
+	d.push()
+	d += elm.ResistorIEC().down().label('1.33M$\Omega$ 1%')
+	d += elm.Dot(open=True).label('Vcontrol',loc='bottom')
+	d.pop()
+	d += elm.Line().right()
+	d += (opamp := elm.Opamp(leads=True).right().flip().anchor('in1'))
+	d += elm.Vdd().left().label('Vvar', loc='bottom').at(opamp.vd)
+	d += elm.GroundSignal().left().at(opamp.vs)
+	d += elm.ResistorIEC().right().label('500$\Omega$').at(opamp.out)
+	d += (pmos := elm.transistors.AnalogPFet(offset_gate=False).reverse().flip().anchor('gate'))
+	d += elm.Dot().at(opamp.out)
+	d += (Cfeedback := elm.Capacitor().down().label('100pF', loc='bottom').at(opamp.out))
+	d += elm.Wire('-|').to(opamp.in1)
+	d += elm.Dot()
+	d += elm.Line().up().at(pmos.drain)
+	d.push()
+	d += elm.ResistorIEC().label('500K$\Omega$').left()
+	d += elm.Wire('-|').to(opamp.in2)
+	d.pop()
+	d += elm.Dot()
+	d += elm.ResistorIEC().up().label('1$\Omega$ 1%')
+	d += elm.Vdd().right().label('Vvar',loc='right')
+	d += (LED := elm.LED().down().flip().at(pmos.source))
+	d += elm.CurrentLabel().at(LED).label('I')
+	#d += elm.CurrentLabelInline().at(LED).label('I')
+	d += elm.GroundSignal()
+	d += elm.Dot().at(pmos.source)
+	d += elm.Line().right()
+	d += elm.Dot(open=True).label('Vmonitor')
+	
+	
+
+#print(dir(elm.opamp))
+#print('\n')
+#print(dir(elm.transistors.PFet))
+

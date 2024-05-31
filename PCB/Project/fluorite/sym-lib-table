@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/Library.kicad_sym")(options "")(descr ""))
+  (lib (name "2023-12-11_00-18-23")(type "KiCad")(uri "/home/lingusilur/9C33-6BBD/develop/projects/HexagramLab/PenguinsLand/fluorite/PCB/datasheet/tps61170/symlib/KiCADv6/2023-12-11_00-18-23.kicad_sym")(options "")(descr ""))
+)
